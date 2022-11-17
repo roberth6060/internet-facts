@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Linked CSS -->
+    <link rel="stylesheet" href="../assets/css/index.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- *********** NAVBAR SECTION *********** -->
+      <nav>
+        <div class="menu">
+          <a href="../index.html">Home</a>
+          <a href="./pioneers.html">Pioneers</a>
+          <a class="active" href="./http.html">HTTP</a>
+          <a href="./iot.html">Internet of things</a>
+          <a href="./terminology.html">Terminology</a>
+          <a href="./references.html">References</a>
+        </div>
+      </nav>
+      <!-- *********** MAIN CONTENT *********** -->
+      <div class="container">
+        <h1>How HTML Requests Work</h1>
+        <p>
+          Resources like HTML files may be retrieved via the HTTP protocol. It
+          is a client-server protocol, which means that all requests for data
+          transmission on the Internet are initiated by the recipient, which is
+          frequently the Web browser. Clients and servers exchange separate
+          messages to communicate (as opposed to a stream of data). The client,
+          which is frequently a web browser, sends messages known as requests,
+          and the server responds with responses.
+          <br />
+          An illustration of a client-server system is the Web. It comprises web
+          clients (another term for browsers), which are information consumers,
+          and web servers, which are programs or machines that have information
+          to supply. The client-server architecture is used by many systems; the
+          web is only the most well-known example.
+        </p>
+        <img src="../assets/imgs/http.png" alt="HTTP Diagram" width="700" />
+        <p>
+          The following illustration demonstrates the process that occurs when a
+          client browser requests to view a website. The first step is that the
+          HTTP request is sent from the client computer to the HTTP/or HTTPS web
+          server retrieving the static resources such as HTML files and/or
+          dynamic resources such as the web application database. Subsequently,
+          HTTP responses are sent to the client in the form of an HTTP/or HTTPS
+          response. The request information is then displayed on the client's
+          browser and the process repeats if additional requests are made.
+        </p>
+      </div>
+    </div>
+
+    <!-- Linked JavaScript File -->
+    <script type="module" src="../../dist/js/index.js"></script>
+  </body>
+</html>
