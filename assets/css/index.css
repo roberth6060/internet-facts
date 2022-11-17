@@ -21,6 +21,7 @@ nav {
   padding: 10px 20px;
   background-color: #395144;
   color: #ffffff !important;
+  transform: skew(-5deg);
 }
 .menu a {
   padding: 10px 20px;
@@ -29,6 +30,7 @@ nav {
   background-color: #4e6c50;
   color: #ffffff !important;
   transition: 0.2s;
+  transform: skew(-5deg);
 }
 
 /***** NAVBAR *****/
