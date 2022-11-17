@@ -48,7 +48,7 @@ const fetchUsers = async () => {
     pioneersContent?.insertAdjacentHTML(
       "beforeend",
       `    
-      <figure class="card-container">
+      <figure class="card">
          <h3 class="title">${name}</h3>
          <img alt=${name} src=${imageUrl} width="200"/>
          <figcaption class="hidden">Source: <a href=${source}>${source?.substring(

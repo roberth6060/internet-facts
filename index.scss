@@ -6,6 +6,22 @@
 $bg: #f0ebce;
 $font: #37393a;
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
 /**NOTE - Global Styles */
 * {
   box-sizing: border-box;
@@ -22,12 +38,13 @@ h1 {
   text-align: center;
   padding: 15px 0;
 }
-h2 {
+h2,
+h3 {
   padding: 5px 15px;
 }
 
 p {
-  line-height: 1.3rem;
+  line-height: 1.4rem;
 }
 
 .main-container {
@@ -45,7 +62,8 @@ p {
     justify-content: center;
     padding: 15px 0;
 
-    p {
+    p,
+    img {
       padding: 0 15px;
     }
   }

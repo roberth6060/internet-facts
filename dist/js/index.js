@@ -32,7 +32,7 @@ const fetchUsers = () => __awaiter(void 0, void 0, void 0, function* () {
     pioneers.map(({ name, imageUrl, contributions, background, source }) => {
         const checkIfUndefined = (listItem) => typeof listItem !== "undefined" ? `<li>${listItem}</li>` : "";
         pioneersContent === null || pioneersContent === void 0 ? void 0 : pioneersContent.insertAdjacentHTML("beforeend", `    
-      <figure class="card-container">
+      <figure class="card">
          <h3 class="title">${name}</h3>
          <img alt=${name} src=${imageUrl} width="200"/>
          <figcaption class="hidden">Source: <a href=${source}>${source === null || source === void 0 ? void 0 : source.substring(0, 40)}...</a></figcaption>
