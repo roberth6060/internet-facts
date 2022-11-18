@@ -1,0 +1,19 @@
+$phone: 576px;
+$tablet: 992px;
+$laptop: 1200px;
+
+.home {
+  h3 {
+    padding-left: 15px;
+    padding-bottom: 10px;
+  }
+
+  @media only screen and (max-width: $laptop) {
+    .row {
+      flex-direction: column !important;
+    }
+    img {
+      padding: 15px 0 !important;
+    }
+  }
+}

@@ -1,14 +1,13 @@
 /***** NAVBAR *****/
-
+$phone: 576px;
+$tablet: 992px;
+$laptop: 1200px;
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
   height: 7vh;
-  z-index: 1;
   padding: 20px 50px;
   align-items: center;
   margin-bottom: 15px;
+  width: 80%;
 }
 
 .menu {
