@@ -11,16 +11,26 @@
   <body>
     <div class="main-container">
       <!-- *********** NAVBAR *********** -->
-      <nav>
-        <div class="menu">
-          <a class="active" href="./index.html">Home</a>
-          <a href="./pages/pioneers.html">Pioneers</a>
-          <a href="./pages/http.html">HTTP</a>
-          <a href="./pages/iot.html">IoT</a>
-          <a href="./pages/terminology.html">Terminology</a>
-          <a href="./pages/references.html">References</a>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./assets/imgs/logo.png" alt="Logo" width="50" />
+          <span>Internet facts</span>
         </div>
+
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+          <li class="active"><a href="./index.html">Home</a></li>
+          <li><a href="./pages/pioneers.html">Pioneers</a></li>
+          <li><a href="./pages/http.html">HTTP</a></li>
+          <li><a href="./pages/iot.html">IoT</a></li>
+          <li><a href="./pages/terminology.html">Terminology</a></li>
+          <li><a href="./pages/references.html">References</a></li>
+        </ul>
       </nav>
+
       <!-- *********** MAIN CONTENT *********** -->
       <div class="home container">
         <h1 class="title">Origin of the Internet and World Wide Web</h1>

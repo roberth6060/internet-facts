@@ -1,46 +1,178 @@
 /***** NAVBAR *****/
-nav {
-  height: 7vh;
-  padding: 20px 50px;
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+.navbar {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 15px;
-  width: 80%;
+  text-align: center;
+  justify-content: space-between;
+  padding: 1em;
+  font-size: 15px;
+}
+.navbar .logo {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.navbar .logo img {
+  width: 50px;
+}
+.navbar .logo span {
+  font-size: 15px;
+  font-family: "Raleway";
+  color: #2093eb;
 }
 
 .menu {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  font-size: 20px;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  margin: 0 1rem;
+  overflow: hidden;
+  padding: 5px 10px;
+}
+.menu li:hover:not(.active) {
+  background-color: #4e6c50;
+  color: #222 !important;
+  transition: 0.2s;
+  transform: skew(-5deg);
 }
 .menu .active {
-  padding: 10px 20px;
   background-color: #395144;
   color: #ffffff !important;
   transform: skew(-5deg);
 }
+.menu .active a {
+  color: #fff;
+}
 .menu a {
   padding: 10px 20px;
 }
-.menu a:hover:not(.active) {
-  background-color: #4e6c50;
-  color: #ffffff !important;
-  transition: 0.2s;
-  transform: skew(-5deg);
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/***** NAVBAR *****/
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
 .home h3 {
   padding-left: 15px;
   padding-bottom: 10px;
 }
 @media only screen and (max-width: 1200px) {
+  .home img {
+    padding: 15px 0 !important;
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 992px) {
   .home .row {
     flex-direction: column !important;
   }
+  .home :first-child row {
+    background-color: red;
+  }
   .home img {
     padding: 15px 0 !important;
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .home .row {
+    flex-direction: column !important;
+    background-color: yellow;
+  }
+  .home img {
+    padding: 15px 0 !important;
+    width: 500px;
   }
 }
 
@@ -190,11 +322,12 @@ td {
   box-sizing: border-box;
   color: #37393a;
   text-decoration: none;
-  margin: auto;
 }
 
+html,
 body {
   background-color: #f0ebce;
+  margin: 0;
 }
 
 h1 {
@@ -211,12 +344,9 @@ p {
   line-height: 1.4rem;
 }
 
-a:hover {
-  color: #aa8b56 !important;
-}
-
 .main-container {
   width: 80%;
+  margin: auto;
 }
 
 .container {
@@ -242,8 +372,18 @@ a:hover {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
   .main-container {
-    margin: auto;
+    width: 100%;
+    padding: 0 30px;
+  }
+  img {
+    padding: 15px 0 !important;
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .main-container :nth-child(3) {
+    flex-direction: column-reverse !important;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -1,3 +1,4 @@
+//Max with media query:
 $phone: 576px;
 $tablet: 992px;
 $laptop: 1200px;
@@ -8,12 +9,37 @@ $laptop: 1200px;
     padding-bottom: 10px;
   }
 
+  // Laptop view
   @media only screen and (max-width: $laptop) {
+    img {
+      padding: 15px 0 !important;
+      width: 450px;
+    }
+  }
+  //Tablet view
+  @media only screen and (max-width: $tablet) {
     .row {
       flex-direction: column !important;
     }
+
+    :first-child row {
+      background-color: red;
+    }
     img {
       padding: 15px 0 !important;
+      width: 450px;
+    }
+  }
+
+  //Mobile view:
+  @media only screen and (max-width: $phone) {
+    .row {
+      flex-direction: column !important;
+      background-color: yellow;
+    }
+    img {
+      padding: 15px 0 !important;
+      width: 500px;
     }
   }
 }

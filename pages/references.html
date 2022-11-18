@@ -10,16 +10,25 @@
   </head>
   <body>
     <div class="main-container">
-      <!-- *********** NAVBAR SECTION *********** -->
-      <nav>
-        <div class="menu">
-          <a href="../index.html">Home</a>
-          <a href="./pioneers.html">Pioneers</a>
-          <a href="./http.html">HTTP</a>
-          <a href="./iot.html">IoT</a>
-          <a href="./terminology.html">Terminology</a>
-          <a class="active" href="./references.html">References</a>
+      <!-- *********** NAVBAR *********** -->
+      <nav class="navbar">
+        <div class="logo">
+          <img src="../assets/imgs/logo.png" alt="Logo" width="50" />
+          <span>Internet facts</span>
         </div>
+
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./pioneers.html">Pioneers</a></li>
+          <li><a href="./http.html">HTTP</a></li>
+          <li><a href="./iot.html">IoT</a></li>
+          <li><a href="./terminology.html">Terminology</a></li>
+          <li class="active"><a href="./references.html">References</a></li>
+        </ul>
       </nav>
       <!-- *********** MAIN CONTENT *********** -->
       <div class="container">
