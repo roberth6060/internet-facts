@@ -12,8 +12,11 @@ $laptop: 1200px;
   // Laptop view
   @media only screen and (max-width: $laptop) {
     img {
-      padding: 15px 0 !important;
+      // padding: 1em;
       width: 450px;
+      padding-left: 15px;
+
+      background-color: yellow;
     }
   }
   //Tablet view
