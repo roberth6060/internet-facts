@@ -82,6 +82,7 @@ p {
 // Tablet view
 @media only screen and (max-width: $tablet) {
   .main-container {
+    padding: 0 30px;
     :nth-child(3) {
       flex-direction: column-reverse !important;
     }

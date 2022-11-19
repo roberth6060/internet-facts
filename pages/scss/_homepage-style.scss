@@ -12,11 +12,8 @@ $laptop: 1200px;
   // Laptop view
   @media only screen and (max-width: $laptop) {
     img {
-      // padding: 1em;
       width: 450px;
-      padding-left: 15px;
-
-      background-color: yellow;
+      margin-left: 15px;
     }
   }
   //Tablet view
@@ -25,9 +22,6 @@ $laptop: 1200px;
       flex-direction: column !important;
     }
 
-    :first-child row {
-      background-color: red;
-    }
     img {
       padding: 15px 0 !important;
       width: 450px;
@@ -38,7 +32,6 @@ $laptop: 1200px;
   @media only screen and (max-width: $phone) {
     .row {
       flex-direction: column !important;
-      background-color: yellow;
     }
     img {
       padding: 15px 0 !important;

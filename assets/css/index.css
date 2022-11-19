@@ -33,7 +33,6 @@
 .menu li {
   margin: 0 3px;
   overflow: hidden;
-  padding: 5px;
 }
 .menu li:hover:not(.active) {
   background-color: #4e6c50;
@@ -105,7 +104,19 @@
   transform: rotate(-405deg);
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 992px) {
+  .navbar {
+    font-size: 13px;
+  }
+  .navbar .logo span {
+    font-size: 15px;
+  }
+  .menu li {
+    margin: 0 3px;
+    padding: 3px;
+  }
+}
+@media (max-width: 840px) {
   .menu-button-container {
     display: flex;
   }
@@ -117,7 +128,6 @@
     flex-direction: column;
     width: 100%;
     justify-content: center;
-    align-items: center;
   }
   #menu-toggle ~ .menu li {
     height: 0;
@@ -139,7 +149,7 @@
     padding: 0.5em 0;
     width: 100%;
     color: red;
-    background-color: #222;
+    background-color: #f0ebce;
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
@@ -152,16 +162,12 @@
 @media only screen and (max-width: 1200px) {
   .home img {
     width: 450px;
-    padding-left: 15px;
-    background-color: yellow;
+    margin-left: 15px;
   }
 }
 @media only screen and (max-width: 992px) {
   .home .row {
     flex-direction: column !important;
-  }
-  .home :first-child row {
-    background-color: red;
   }
   .home img {
     padding: 15px 0 !important;
@@ -171,7 +177,6 @@
 @media only screen and (max-width: 576px) {
   .home .row {
     flex-direction: column !important;
-    background-color: yellow;
   }
   .home img {
     padding: 15px 0 !important;
@@ -386,6 +391,9 @@ p {
   }
 }
 @media only screen and (max-width: 992px) {
+  .main-container {
+    padding: 0 30px;
+  }
   .main-container :nth-child(3) {
     flex-direction: column-reverse !important;
   }
