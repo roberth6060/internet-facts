@@ -4,6 +4,8 @@
 @import "./pages/scss/_terminology-style.scss";
 @import "./pages/scss/_spinner.scss";
 @import "./pages/scss/_http";
+@import "./pages/scss/references-style";
+
 $bg: #f0ebce;
 $font: #37393a;
 
@@ -85,6 +87,29 @@ p {
     padding: 0 30px;
     :nth-child(3) {
       flex-direction: column-reverse !important;
+    }
+  }
+}
+
+// Tablet view
+@media only screen and (max-width: $tablet) {
+  .main-container {
+    padding: 0 15px;
+    img {
+      width: 80%;
+    }
+    h1 {
+      font-size: 25px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    p,
+    ul {
+      font-size: 14px;
     }
   }
 }

@@ -1,0 +1,19 @@
+//Max with media query:
+$phone: 576px;
+$tablet: 992px;
+$laptop: 1200px;
+
+//Mobile view:
+@media only screen and (max-width: $phone) {
+  .references {
+    ol {
+      padding: 20px;
+      font-size: 12px;
+
+      li {
+        width: 100%;
+      }
+    }
+    overflow: hidden;
+  }
+}

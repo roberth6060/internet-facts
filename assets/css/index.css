@@ -192,6 +192,7 @@
 }
 .pioneers .pioneers-content .card {
   width: 500px;
+  min-width: auto;
   min-height: auto;
   margin: 16px;
   border: 1px solid #ccc;
@@ -210,6 +211,18 @@
   object-fit: cover;
 }
 
+@media only screen and (max-width: 576px) {
+  .pioneers .pioneers-content .card {
+    min-width: 100%;
+    width: auto;
+    min-height: auto;
+  }
+  .pioneers .pioneers-content .card img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+  }
+}
 table,
 th,
 td {
@@ -326,6 +339,18 @@ td {
   padding: 15px 0;
 }
 
+@media only screen and (max-width: 576px) {
+  .references {
+    overflow: hidden;
+  }
+  .references ol {
+    padding: 20px;
+    font-size: 12px;
+  }
+  .references ol li {
+    width: 100%;
+  }
+}
 /**NOTE - Global Styles */
 * {
   box-sizing: border-box;
@@ -397,5 +422,26 @@ p {
   }
   .main-container :nth-child(3) {
     flex-direction: column-reverse !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .main-container {
+    padding: 0 15px;
+  }
+  .main-container img {
+    width: 80%;
+  }
+  .main-container h1 {
+    font-size: 25px;
+  }
+  .main-container h2 {
+    font-size: 20px;
+  }
+  .main-container h2 {
+    font-size: 18px;
+  }
+  .main-container p,
+.main-container ul {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=index.css.map */
