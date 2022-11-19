@@ -45,6 +45,10 @@ $bg: #f0ebce;
     overflow: hidden;
     padding: 5px 10px;
 
+    a {
+      width: 100%;
+    }
+
     &:hover:not(.active) {
       background-color: #4e6c50;
 
@@ -90,7 +94,7 @@ $bg: #f0ebce;
 .menu-button::before,
 .menu-button::after {
   display: block;
-  background-color: #fff;
+  background-color: #4e6c50;
   position: absolute;
   height: 4px;
   width: 30px;
@@ -172,6 +176,7 @@ $bg: #f0ebce;
   .menu > li {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0.5em 0;
     width: 100%;
@@ -180,5 +185,17 @@ $bg: #f0ebce;
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
+  }
+
+  .menu {
+    li {
+      &:hover:not(.active) {
+        transform: skew(0deg);
+      }
+    }
+
+    .active {
+      transform: skew(0deg);
+    }
   }
 }
