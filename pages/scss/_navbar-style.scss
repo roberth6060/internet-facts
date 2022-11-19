@@ -43,6 +43,7 @@ $bg: #f0ebce;
   li {
     margin: 0 3px;
     overflow: hidden;
+    padding: 5px 10px;
 
     &:hover:not(.active) {
       background-color: #4e6c50;

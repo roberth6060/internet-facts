@@ -33,6 +33,7 @@
 .menu li {
   margin: 0 3px;
   overflow: hidden;
+  padding: 5px 10px;
 }
 .menu li:hover:not(.active) {
   background-color: #4e6c50;
